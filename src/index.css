@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #050505;
+  --color-bg-secondary: #080808;
+  --color-bg-tertiary: #0B0B0F;
+  --color-card: #111111;
+  --color-card-hover: #151515;
+  --color-card-glass: rgba(255, 255, 255, 0.04);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #D8D8D8;
+  --color-text-muted: #8A8A8A;
+  --color-accent-gold: #C9A86A;
+  --color-accent-gold-light: #E0C992;
+  --color-accent-purple: #7C5CFF;
+  --color-accent-purple-light: #9B82FF;
+  --color-success: #34D399;
+  --color-error: #F87171;
+  --color-warning: #FBBF24;
+  --font-family-arabic: 'IBM Plex Sans Arabic', sans-serif;
+  --font-family-english: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+  background-color: #050505;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::selection {
+  background: rgba(201, 168, 106, 0.3);
+  color: #FFFFFF;
+}
+
+input, textarea, select {
+  font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(201, 168, 106, 0.1); }
+  50% { box-shadow: 0 0 40px rgba(201, 168, 106, 0.2); }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.font-preview-area {
+  font-feature-settings: normal;
+}
